@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Trang web cơ bản</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="brand">
+        <a href="/" class="logo">TRAO ĐỔI ĐỒ CŨ <span class="kqp">KQP</span></a>
+      </div>
+
+      <div class="auth-area">
+        <button id="btn-add-post" class="btn small">Đăng tin</button>
+        <button id="btn-login" class="btn small">Đăng nhập</button>
+        <button id="btn-register" class="btn small ghost">Đăng ký</button>
+        <div id="user-info" class="user-info" style="display:none">
+          <span id="user-name"></span>
+          <button id="btn-logout" class="btn small ghost">Đăng xuất</button>
+        </div>
+      </div>
+
+      <div class="search-area">
+        <form id="search-form" onsubmit="return false;">
+          <input id="search-input" type="search" placeholder="Tìm kiếm: tên, mô tả, địa điểm..." aria-label="Tìm kiếm">
+          <button id="search-clear" type="button" title="Xóa">×</button>
+        </form>
+        <nav class="cats">
+          <a href="#" data-cat="all" class="active">Tất cả</a>
+          <a href="#" data-cat="dien-thoai">Điện thoại</a>
+          <a href="#" data-cat="may-tinh">Máy tính</a>
+          <a href="#" data-cat="thoi-trang">Thời trang</a>
+          <a href="#" data-cat="khac">Khác</a>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <section id="about">
+  <h2>Giới thiệu</h2>
+  <p>Trang đăng mua/bán đồ cũ — nhanh, gọn và dễ sử dụng.</p>
+    </section>
+
+    <section id="posts">
+      <h2>Bài viết mới nhất</h2>
+
+      <div class="posts-grid" id="posts-grid">
+        <article id="post-1" class="post" data-id="post-1" data-cat="dien-thoai" data-title="iPhone 11 - Zin, giá rẻ" data-loc="Hà Nội">
+          <div class="post-thumb" aria-hidden="true"></div>
+          <div class="post-body">
+            <h3 class="post-title">iPhone 11 - Zin, giá rẻ</h3>
+            <p class="post-excerpt">Máy còn đẹp, pin 85%, tặng ốp lưng. Liên hệ để xem máy trực tiếp.</p>
+            <div class="post-meta">
+              <span class="price">2.900.000₫</span>
+              <span class="location">Hà Nội</span>
+              <button class="like-btn" data-id="post-1" aria-pressed="false" title="Thích">
+                <span class="like-icon">♡</span>
+                <span class="like-count">0</span>
+              </button>
+            </div>
+          </div>
+        </article>
+
+        <article id="post-2" class="post" data-id="post-2" data-cat="may-tinh" data-title="Laptop Dell cũ - CPU i5" data-loc="Hồ Chí Minh">
+          <div class="post-thumb" aria-hidden="true"></div>
+          <div class="post-body">
+            <h3 class="post-title">Laptop Dell cũ - CPU i5</h3>
+            <p class="post-excerpt">Dùng ổn, ssd 256GB, màn 14 inch. Phù hợp học tập và văn phòng.</p>
+            <div class="post-meta">
+              <span class="price">4.200.000₫</span>
+              <span class="location">Hồ Chí Minh</span>
+              <button class="like-btn" data-id="post-2" aria-pressed="false" title="Thích">
+                <span class="like-icon">♡</span>
+                <span class="like-count">0</span>
+              </button>
+            </div>
+          </div>
+        </article>
+
+        <article id="post-3" class="post" data-id="post-3" data-cat="thoi-trang" data-title="Áo khoác nam size M" data-loc="Đà Nẵng">
+          <div class="post-thumb" aria-hidden="true"></div>
+          <div class="post-body">
+            <h3 class="post-title">Áo khoác nam size M</h3>
+            <p class="post-excerpt">Áo hàng hiệu, ít mặc, còn mới trên 90%.</p>
+            <div class="post-meta">
+              <span class="price">350.000₫</span>
+              <span class="location">Đà Nẵng</span>
+              <button class="like-btn" data-id="post-3" aria-pressed="false" title="Thích">
+                <span class="like-icon">♡</span>
+                <span class="like-count">0</span>
+              </button>
+            </div>
+          </div>
+        </article>
+      </div>
+
+      <p class="no-results" id="no-results" style="display:none">Không tìm thấy kết quả phù hợp.</p>
+    </section>
+
+    <section id="contact">
+      <h2>Liên hệ</h2>
+      <p>Email: <a href="mailto:vuphuoc2004@gmail.com">vuphuoc2004@gmail.com</a></p>
+    </section>
+  </main>
+
+  <footer class="container">
+    <p>&copy; 2025 KQP</p>
+    <p id="time">Đang tải thời gian...</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
